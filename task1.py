@@ -44,8 +44,7 @@ def TheRabbitsFoot(s, encode):
                     result += arr[j][i]
         return result
 
-# Отредактированное решение
-
+# Отредактированное решение 
 def codeEncripted(source_string):
     merged_string = source_string.replace(' ','')
     square_root_string = pow(len(merged_string),0.5) 
