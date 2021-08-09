@@ -1,5 +1,4 @@
 # Изначальное решение
-
 def codeEncripted(s):
     S = s.replace(' ','')
     squareRoot = pow(len(S),0.5) 
@@ -45,6 +44,7 @@ def TheRabbitsFoot(s, encode):
         return result
 
 # Отредактированное решение 
+
 def codeEncripted(source_string):
     merged_string = source_string.replace(' ','')
     square_root_string = pow(len(merged_string),0.5) 
