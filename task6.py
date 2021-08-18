@@ -105,7 +105,6 @@ class OrderedList:
             node = node.next
         return r
 
-# сделано по заданию
 
 class OrderedStringList(OrderedList):
     def __init__(self, asc):
@@ -115,7 +114,9 @@ class OrderedStringList(OrderedList):
         if v1.value.rstrip().lstrip() < v2.value.rstrip().lstrip(): return -1
         elif v1.value.rstrip().lstrip() == v2.value.rstrip().lstrip(): return 0
         else: return 1
-
+        
+        
+# сделано по заданию
 class Node:
     def __init__(self, value_node):
         self.value = value_node
@@ -177,6 +178,7 @@ class OrderedList:
         
         
     def del_node_by_value(self, value_node,del_all_node=False):
+        # функция удаляет узел по значению
         if self.head == None: return
         while self.head.value == value_node:
             if self.head.next == None:
@@ -247,10 +249,12 @@ class LinkedList:
         self.head = None
         self.tail = None
 
+        
     def AddTailLinkedList(self,item_linked_list): 
         if self.head is None: self.head = item_linked_list
         else: self.tail.next = item_linked_list
         self.tail = item_linked_list
+    
     
     def DeletingElHeadLinkedList(self):
         if self.head == None: return None
@@ -262,6 +266,7 @@ class LinkedList:
             self.head = self.head.next
         return el_head_delete
         
+        
     def LenLinkedList(self):
         len_linked_list = 0
         node_linked_list = self.head
@@ -270,12 +275,14 @@ class LinkedList:
             node_linked_list = node_linked_list.next
         return len_linked_list
     
+    
     def PrintAllLinkedList(self):
         node_linked_list = self.head
         while node_linked_list != None:
             print(node_linked_list.value)
             node_linked_list = node_linked_list.next
 
+            
 # сделано по заданию
 class LinkedList:
 
@@ -283,11 +290,13 @@ class LinkedList:
         self.head = None
         self.tail = None
 
+        
     def adds_new_node_tail(self,item_linked_list): 
         # функция добавляет новый узел в хвост
         if self.head is None: self.head = item_linked_list
         else: self.tail.next = item_linked_list
         self.tail = item_linked_list
+    
     
     def removes_node_in_head(self):
         # функция удаляет узел с головы
@@ -300,6 +309,7 @@ class LinkedList:
             self.head = self.head.next
         return el_head_delete
         
+        
     def num_nodes_linkedlist(self):
         # функция определяет количество узлов
         len_linked_list = 0
@@ -308,6 +318,7 @@ class LinkedList:
             len_linked_list += 1
             node_linked_list = node_linked_list.next
         return len_linked_list
+    
     
     def prints_all_nodes(self):
         # функция печатает все узлы
